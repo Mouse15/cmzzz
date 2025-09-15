@@ -1,5 +1,5 @@
 ﻿import { connect } from 'cloudflare:sockets';
-let userID = 'zys';
+let userID = '';
 let proxyIP = '';
 let DNS64Server = '';
 let subConverter = atob('U3ViQXBpLkNtbGlVc3NzUy5OZXQ=');
@@ -7174,4 +7174,5 @@ function config_Html(token = "test", proxyhost = "") {
     return html;
 
 }
+
 
