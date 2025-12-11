@@ -60,7 +60,7 @@ export default {
                         const Usage_JSON = await getCloudflareUsage(url.searchParams.get('Email'), url.searchParams.get('GlobalAPIKey'), url.searchParams.get('AccountID'), url.searchParams.get('APIToken'));
                         return new Response(JSON.stringify(Usage_JSON, null, 2), { status: 200, headers: { 'Content-Type': 'application/json' } });
                     } catch (err) {
-                        const errorResponse = { msg: '查询请求量失败，失败原因：' + err.message, error: err.message };
+                        const errorResponse = { msg: '查询请求量失败,失败原因：' + err.message, error: err.message };
                         return new Response(JSON.stringify(errorResponse, null, 2), { status: 500, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
                     }
                 } else if (区分大小写访问路径 === 'admin/getADDAPI') {// 验证优选API
@@ -1457,4 +1457,5 @@ async function html1101(host, 访问IP) {
 </body>
 </html>`;
 }
+
 
